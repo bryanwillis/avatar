@@ -18,12 +18,12 @@ function candid_user_gravatar_shortcode ( $attributes ) {
 	  global $current_user;
           get_currentuserinfo();
 	  extract(shortcode_atts(array(
-		       "id"=> $current_user->ID,
-		       "size"=> 32,
-		       "default"=> 'mystery',
-		       "alt"=> '',
-		       "class"=> '',
-		       "style"=> '',
+		       "id" => $current_user->ID,
+		       "size" => 32,
+		       "default" => 'mystery',
+		       "alt" => '',
+		       "class" => '',
+		       "style" => '',
 	  ), $attributes, 'get_avatar' ));
 	  $get_avatar= get_avatar( $id, $size, $default, $alt );
 	   ?>
