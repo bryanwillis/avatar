@@ -1,8 +1,8 @@
  <?php
 /*
-Plugin Name: Get Avatar Shortcode
-Plugin Script: get_avatar_shortcode.php
-Plugin URI: http://www.wordpress.org/get_avatar_shortcode
+Plugin Name: Avatar Shortcode
+Plugin Script: user_avatar_shortcode.php
+Plugin URI: http://wordpress.org/plugins/avatar-shortcode/
 Description: Allows you to use avatars/gravatars or profile pictures as shortcodes the same way you would in templates
 Version: 0.1
 License: GPL
@@ -16,9 +16,9 @@ Author URI: http://profiles.wordpress.org/codecandid
 if ( function_exists( 'get_avatar' ) ) {
 function candid_user_gravatar_shortcode ( $attributes ) {
 	  global $current_user;
-      get_currentuserinfo();
+          get_currentuserinfo();
 	  extract(shortcode_atts(array(
-		  	   "id"=> $current_user->ID,
+		       "id"=> $current_user->ID,
 		       "size"=> 32,
 		       "default"=> 'mystery',
 		       "alt"=> '',
